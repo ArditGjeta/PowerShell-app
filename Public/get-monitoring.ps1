@@ -7,7 +7,7 @@ function get-monitoring {
         Write-Output "Please use a character that is a digit, do not enter anything else!"
         
     } else {
-        New-sysPerform -Nr $sequences
+        New-sysPerform -number $sequences
         break
     }
 
