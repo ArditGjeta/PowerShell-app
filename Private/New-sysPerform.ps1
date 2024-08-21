@@ -1,7 +1,7 @@
 function New-sysPerform {
 # Parameter to pass several how many sequences you want to see.
     param (
-        [string]$Snumber
+        [string]$number
     )
     $count = 0
 
