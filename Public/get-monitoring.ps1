@@ -12,9 +12,14 @@ function get-monitoring {
     }
 
 }
-
-    Write-Output "Next command will show 10 newest logs of Application, Security and System"
+    # A little pause of 1 second so the user can read what the messages are saying
+    Start-sleep -s 1
+    
+    # Making a new line so the user can detect the next sequences of running codes.
+    Write-Output "`n Next command will show 10 newest logs of Application, Security and System"
+    Start-sleep -s 1
     Write-Output "Note that to see the security log you need to have administrator permissions"
+    Start-sleep -s 2
     New-ErrorLogs
     
 }
