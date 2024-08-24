@@ -3,25 +3,22 @@ function New-ErrorLogs {
     $name = @('Application', 'Security', 'System')
     
     foreach ($log in $name) {
-        # Get Error and Warning logs for the current log name. If you want to get general logs, delete "-EntryType Error, Warning"
+        # Get Error and Warning logs for the current log name.
         $moniTor = Get-EventLog -LogName $log -Newest 10 -EntryType Error, Warning -ErrorAction SilentlyContinue
         
         # Check if any logs were found
         if ($null -eq $moniTor -or $moniTor.Count -eq 0) {
             Write-Host "No matching entries found in $log log." -ForegroundColor Green
         } else {
-        
-            # Formating to show only Time Source and Messages
-            $seperated = $moniTor | Format-Table -Property TimeGenerated, Source, Message
             
             # Display a message indicating which log is being shown
             Write-Host "These are $log logs:" -ForegroundColor Cyan
-            
-            # Output the logs to the console
-            Write-Output $seperated
-        }
+
+            # Format and display the logs with TimeGenerated, Source, and Message properties
+            $monitor | Format-Table -Property TimeGenerated, Source, Message -AutoSize
         
-        # Add a separator for readability
-        Write-Host "`n--- End of $log logs ---`n" -ForegroundColor Yellow
+            # Add a separator for readability
+            Write-Host "`n--- End of $log logs ---`n" -ForegroundColor Yellow
+        }
     }
 }
