@@ -1,11 +1,16 @@
 ﻿
 function Test-ComputerOnline {
 try {
-    # Declaring the Servers' name to make an exclusion when getting all computers
+    # Prompting user to search for a machine on domain.
+    $search = Read-Host "Enter the name/characters of the machine: "
+
+    # Declaring server's name. 
     $ServerName = "Dida"
 
-    $ComputerNames = Get-ADComputer -Filter * | Where-Object { $_.Name -ne $ServerName } | Select-Object -ExpandProperty Name
-    # Jobs array will store all computers' name
+    # Searchig on Active Directory for computer objects
+    $ComputerNames = Get-ADComputer -Filter "Name -like '*$search*'" | Where-Object { $_.Name -ne $ServerName } | Select-Object -ExpandProperty Name
+
+    # Variable that will store computer objects.
     $jobs = @()
 
     # Below is performed a parallel execution to ping all computers at the same time, this will make the process run faster.
