@@ -1,5 +1,8 @@
+# Prompting the user to enter the name of the machine
+$computer = Read-Host " Enter the name of the machine: "
+
 # Getting Security logs with ID=4624 to see the last 10 users that have logged on to the machine
- $logs = Get-WinEvent -ComputerName 'Server2' -FilterHashtable @{LogName='Security'; Id='4624'} -Credential (Get-Credential) -MaxEvents 10
+ $logs = Get-WinEvent -ComputerName $computer -FilterHashtable @{LogName='Security'; Id='4624'} -Credential (Get-Credential) -MaxEvents 10
 
 # Function that will return Domain/Workgroup and user logged on to the machine
 Function Get-userlogged {
