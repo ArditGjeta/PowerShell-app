@@ -1,5 +1,5 @@
 function Get-Monitoring {
-    
+    try {
   while ($true) {
     Write-Output "Below you will see CPU performance"
     $sequences = Read-Host -Prompt "Enter the number of sequences you want to see (Only Full Numbers): " 
@@ -25,3 +25,5 @@ function Get-Monitoring {
     New-ErrorLogs
     
 }
+
+    } catch {Write-Output "Unexpected error, try again later"}
