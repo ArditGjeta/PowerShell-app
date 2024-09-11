@@ -23,7 +23,8 @@ function Get-Monitoring {
     Write-Output "Note that to see the security log you need to have administrator permissions"
     Start-sleep -s 2
     New-ErrorLogs
-    
+
+     } catch {Write-Output "Unexpected error, try again later"}
 }
 
-    } catch {Write-Output "Unexpected error, try again later"}
+   
