@@ -36,10 +36,12 @@ $userinfo = Get-userlogged -Message $message
 # Converting log time to string so we can display it next to the logged user
 $timelogged = $log.TimeCreated.ToString("dd-mm-yyyy HH:mm:ss")
 Write-Output "$userinfo ->   Logged in: $timelogged"
+
+    } catch { write-output 'Unexpected error, try again later'}
     
 }
 
- } catch { write-output 'Unexpected error, try again later'}
+
 
 
 
