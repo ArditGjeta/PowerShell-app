@@ -1,3 +1,4 @@
+try {
 # Prompting the user to enter the name of the machine
 $computer = Read-Host " Enter the name of the machine: "
 
@@ -37,6 +38,8 @@ $timelogged = $log.TimeCreated.ToString("dd-mm-yyyy HH:mm:ss")
 Write-Output "$userinfo ->   Logged in: $timelogged"
     
 }
+
+ } catch { write-output = 'Unexpected error, try again later'}
 
 
 
