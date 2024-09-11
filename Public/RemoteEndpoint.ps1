@@ -1,4 +1,6 @@
 function RemoteEndpoint {
+
+Try {
     param (
         [string]$computer,
         [string]$user
@@ -42,6 +44,8 @@ function RemoteEndpoint {
             # If the connection fails at pinging the remote machine, you need to check the IP of both machines
             Write-Host "Connection Failed! Please check if the remote machine is on the same network " -ForegroundColor Red
         }
+
+        } catch {write-output "Unexpected error, try again later"}
     } 
     
     
