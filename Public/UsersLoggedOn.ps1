@@ -39,7 +39,7 @@ Write-Output "$userinfo ->   Logged in: $timelogged"
     
 }
 
- } catch { write-output = 'Unexpected error, try again later'}
+ } catch { write-output 'Unexpected error, try again later'}
 
 
 
