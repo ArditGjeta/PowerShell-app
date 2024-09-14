@@ -44,3 +44,4 @@ If you have any questions or need further assistance, please feel free to contac
 
 This
 This is just an test for my GitHub API Module Wrapper that I am doing using PowerShell. #Thank You.
+# New Line
