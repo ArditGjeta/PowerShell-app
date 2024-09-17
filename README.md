@@ -47,3 +47,4 @@ This is just an test for my GitHub API Module Wrapper that I am doing using Powe
 # New Line
 o
 This is a test
+This is another test
