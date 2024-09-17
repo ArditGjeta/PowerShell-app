@@ -48,3 +48,4 @@ This is just an test for my GitHub API Module Wrapper that I am doing using Powe
 o
 This is a test
 This is another test
+This is another test
