@@ -46,3 +46,4 @@ This
 This is just an test for my GitHub API Module Wrapper that I am doing using PowerShell. #Thank You.
 # New Line
 o
+This is a test
