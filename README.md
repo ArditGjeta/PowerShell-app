@@ -40,14 +40,6 @@ After you type the name of the machine you are looking for it will list the 10 l
 This project is still in its early stages, and I welcome contributions! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
 # Contact
 If you have any questions or need further assistance, please feel free to contact me.
-
-
-This
-This is just an test for my GitHub API Module Wrapper that I am doing using PowerShell. #Thank You.
-# New Line
-o
-This is a test
-This is another test
 This is another test
 Test
 TESTT
